@@ -53,11 +53,11 @@ docker_build:
 
 # Lints and package the helm chart 
 helm_build:
-  - name: kubearmor-helm
+  - name: kubearmor
     image:
       name: "hypnoglow/kubernetes-helm"
       docker_run_params: ""
-    helm_dir: helm
+    helm_dir: kubearmor-helm
     tag: 1.0.1
     commands:
       - helm lint
