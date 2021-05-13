@@ -78,7 +78,7 @@ kubearmor:
 
 cosauditd:
   image:
-    repository: accuknox/kubearmor-cos-auditd
+    repository: gcr.io/accuknox/snapshot/kubearmor-cos-auditd
     pullPolicy: Always
     # Overrides the image tag whose default is the chart appVersion.
     tag: latest
