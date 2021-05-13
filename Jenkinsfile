@@ -1,4 +1,4 @@
-@Library('KloudOne-Jenkins-CI-library@dev') _
+@Library('KloudOne-Jenkins-CI-library@master') _
 pipelineExecute app_config: 'resources/build-info.yaml',
 dev_branch: "dev",
 verify_branch: "verify",
