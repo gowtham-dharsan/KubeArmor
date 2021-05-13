@@ -42,7 +42,7 @@ image_properties:
 trivy_properties:
    status:
    #Acceptable Values are CRITICAL, HIGH, MEDIUM, LOW
-     enabled: "false"
+     enabled: "true"
      level: high
      value: "10"  
    image:
@@ -90,7 +90,7 @@ anchore_properties:
 #***********************************************************************************************************************************#
 sonar_properties:
   status:
-    enabled: "false"
+    enabled: "true"
   quality_gate:
     enabled: "false"
     timeout: "5" 
