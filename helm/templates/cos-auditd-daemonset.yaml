@@ -42,11 +42,6 @@ spec:
           {{- toYaml .Values.cosauditd.env | nindent 12 }}
         volumeMounts:
           {{- toYaml .Values.cosauditd.volumeMounts | nindent 12 }}
-        - name: lib-systemd-path
-          mountPath: /host/lib
-          readOnly: true
-        - name: var-log-path
-          mountPath: /var/log
         terminationMessagePolicy: File
         terminationMessagePath: /dev/termination-log
         terminationGracePeriodSeconds: 30
