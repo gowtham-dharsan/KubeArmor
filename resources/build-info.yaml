@@ -119,6 +119,8 @@ sonar_properties:
       sonar.login: sonar-accu-cred
 
 
+kubehunter_properties:
+  cluster_ip: "35.188.158.69"
 #***********************************************************************************************************************************#
 # Lints and package the helm chart 
 #helm build mention the name for helm build. specify the helm image and docker parameter to run the helm docker
