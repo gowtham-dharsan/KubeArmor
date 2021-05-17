@@ -154,6 +154,12 @@ publish_config:
       verify: https://artifactory.accuknox.com/repository/helm-verify/
       prod: https://artifactory.accuknox.com/repository/helm-prod/
 
+#***********************************************************************************************************************************#
+# publish helmchart to specified CD git repository
+#for CD git credentials use username/API Token combo which was created in jenkins manage credentials.
+#Pass the CD git repostiry url for publishing helm chart to CD repo
+#***********************************************************************************************************************************#
+
 deploy_config:
   project: 'accuknox'
   gcr_credentials: 'gcr'
