@@ -44,7 +44,7 @@ spec:
           {{- toYaml .Values.cosauditd.volumeMounts | nindent 12 }}
         terminationMessagePolicy: File
         terminationMessagePath: /dev/termination-log
-        terminationGracePeriodSeconds: 30
+      terminationGracePeriodSeconds: 30
       tolerations:
       - effect: NoSchedule
         key: node.alpha.kubernetes.io/ismaster
