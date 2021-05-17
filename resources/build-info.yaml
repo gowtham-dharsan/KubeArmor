@@ -127,8 +127,7 @@ sonar_properties:
 helm_build:
   - name: kubearmor
     image:
-      #name: "hypnoglow/kubernetes-helm"
-      name: "artifactory.accuknox.com/accuknox/custom-helm-image:latest"
+      name: "hypnoglow/kubernetes-helm"
       docker_run_params: ""
     helm_dir: helm
     tag: 1.0.1
