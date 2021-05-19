@@ -37,9 +37,10 @@ spec:
       containers:
       - name: kubearmor-cos-auditd
         image: "{{ .Values.cosauditd.image.repository }}:{{ .Values.cosauditd.image.tag | default .Chart.AppVersion }}"
+        #image: accuknox/kubearmor-cos-auditd:latest
         imagePullPolicy: Always
         env:
-          {{- toYaml .Values.cosauditd.env | nindent 12 }}
+        {{- toYaml .Values.cosauditd.env | nindent 12 }}
         volumeMounts:
           {{- toYaml .Values.cosauditd.volumeMounts | nindent 12 }}
         terminationMessagePolicy: File
