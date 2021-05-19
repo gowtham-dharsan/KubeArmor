@@ -123,7 +123,7 @@ sonar_properties:
 #Mention helm dir and tag for build
 #***********************************************************************************************************************************#
 helm_build:
-  - name: kubearmor
+  - name: Helm-Build
     image:
       name: "hypnoglow/kubernetes-helm"
       docker_run_params: ""
