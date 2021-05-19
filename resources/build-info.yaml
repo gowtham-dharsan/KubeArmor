@@ -140,10 +140,10 @@ helm_build:
 #***********************************************************************************************************************************#
 # publish docker image, helmchart and artifacts to specified artifactory locations
 publish_config:
-    publish_jfrog_credentials: "accunoxwithnexus"
+    publish_nexus_credentials: "accunoxwithnexus"
     docker:
       snapshot: artifactory.accuknox.com/repository/docker-snapshot
-      dev:  artifactory.accuknox.com/repository/accu-docker
+      dev:  artifactory.accuknox.com/repository/docker-dev
       verify:  artifactory.accuknox.com/repository/accu-docker
       prod:  artifactory.accuknox.com/repository/accu-docker
     helm:
@@ -151,3 +151,17 @@ publish_config:
       dev: https://artifactory.accuknox.com/repository/helm-dev/
       verify: https://artifactory.accuknox.com/repository/helm-verify/
       prod: https://artifactory.accuknox.com/repository/helm-prod/
+      
+#***********************************************************************************************************************************#
+# publish helmchart to specified CD git repository
+#for CD git credentials use username/API Token combo which was created in jenkins manage credentials.
+#Pass the CD git repostiry url for publishing helm chart to CD repo
+#***********************************************************************************************************************************#
+
+deploy_config:
+  project: 'accuknox'
+  gcr_credentials: 'gcr'
+  cd_credentials: "github-token"
+  cd_repo: github.com/accuknox/Argo-CD-Manifests.git
+  cd_user: 'accuknox'
+  cd_email: 'cd@accuknox.com'      
